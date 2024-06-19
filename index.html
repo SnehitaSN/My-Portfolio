@@ -66,27 +66,64 @@
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>UI/UX</span><br />Desigining Web/App Interfaces</li>
-                <li><span>Web Development</span><br />Web Development</li>
-                <li><span>App Development</span><br />Building Android Apps</li>
+                <li>
+                  <span>Front-End Technoloies</span
+                  ><br />HTML,CSS,JavaScript,ReactJs,Tailwind CSS,
+                  Bootstrap,Figma
+                </li>
+                <li>
+                  <span>Back-End Technologies</span><br />Node.Js,ExpressJS
+                </li>
+                <li><span>Nosql Database</span><br />MongoDB</li>
+                <li>
+                  <span>Activities & Interests</span><br />In my free time I
+                  enjoy reading non-fiction books, listening to
+                  music,photography,teaching kids, yoga, meditation and Arts
+                  Crafts.
+                </li>
               </ul>
             </div>
 
             <div class="tab-contents" id="experience">
               <ul>
-                <li><span>UI/UX</span><br />Desigining Web/App Interfaces</li>
-                <li><span>Web Development</span><br />Web Development</li>
-                <li><span>App Development</span><br />Bud Apps</li>
+                <li>
+                  <span
+                    >ANDROID TRAINEE/FALGEE SOFTWARE PVT.LTD MAY2016-M1Y2017 </span
+                  ><br />• Designing UI as per client requirement. <br />
+                  • Writing clean and efficient codes for android applications.
+                  <br />
+                  • Monitoring the performance of live apps and working on
+                  optimizing them at the code level. <br />
+                  • Identifying and resolving bottlenecks, rectifying bugs and
+                  enhancing application performance.
+                </li>
+                <li>
+                  <span>CRM EXECUTIVE/GLOBAL ELECTRONICS FEB2013-FEB2014 </span
+                  ><br />• Handled customer relationship management and customer
+                  success roles, including post sales customer ownership. <br />
+                  • Handled primary market research and digital marketing
+                  campaigns using Zoho suite. <br />
+                  • Handling IT enterprise administration.
+                </li>
               </ul>
             </div>
 
             <div class="tab-contents" id="education">
               <ul>
-                <li><span>UI/UX</span><br />Desigining Web/App Interfaces</li>
-                <li><span>Web Development</span><br />Web Development</li>
                 <li>
-                  <span>App Development</span><br />
-                  Apps
+                  <span>BTECH/JNTU,HYDERABAD</span><br />ELECTRONICS AND
+                  COMMUNICATION <br />
+                  APRIL 2012 <br />
+                  GRADE A (78%)
+                </li>
+                <li>
+                  <span>BOARD OF INTERMEDIATE-HYDERABAD </span><br />
+                  MPC 2008 <br />
+                  GRADE A (80%)
+                </li>
+                <li>
+                  <span>SSC-HYDERABAD </span><br />
+                  2006 GRADE A (80%)
                 </li>
               </ul>
             </div>
@@ -177,8 +214,10 @@
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
-            <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
-            <p><i class="fa-solid fa-phone"></i>0123456789</p>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>snehitakulkarni02@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i>9538548468</p>
             <div class="social-icons">
               <a href="https://www.facebook.com/" target="_blank"
                 ><i class="fa-brands fa-facebook"></i
@@ -193,7 +232,9 @@
                 ><i class="fa-brands fa-github"></i
               ></a>
             </div>
-            <a href="images/My-Cv (2).pdf" download class="btn btn2">Download CV</a>
+            <a href="images/My-Cv (2).pdf" download class="btn btn2"
+              >Download CV</a
+            >
           </div>
           <div class="contact-right">
             <form name="submit-to-google-sheet">
@@ -245,23 +286,23 @@
       }
     </script>
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwZ5CKaIgXSbBXK3ET8JsuEL05ZuQt5b81j4fUcTiTYxNKfp5JxGnotAvpvCNb7gVb_3A/exec'
-      const form = document.forms['submit-to-google-sheet']
-      const msg = document.getElementById("msg")
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            msg.innerHTML = "Message sent Successfully!"
-            setTimeout(function(){
-              msg.innerHTML = ""
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwZ5CKaIgXSbBXK3ET8JsuEL05ZuQt5b81j4fUcTiTYxNKfp5JxGnotAvpvCNb7gVb_3A/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
 
-            },5000)
-            form.reset()
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent Successfully!";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
           })
-          .catch(error => console.error('Error!', error.message))
-      })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>
